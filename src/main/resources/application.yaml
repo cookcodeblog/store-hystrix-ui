@@ -1,11 +1,7 @@
-spring:
-  application:
-    name: hystirx-ui
-
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka/}
 
 turbine:
   appConfig: "customer,preference"
@@ -16,4 +12,4 @@ hystrix:
     proxyStreamAllowList: '*'
 
 server:
-  port: 9090
+  port: ${HYSTRIX_DASHBOARD_PORT:9090}
