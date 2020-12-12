@@ -2,6 +2,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://service-registry:8080/eureka/
+  instance:
+    prefer-ip-address: true
 
 turbine:
   appConfig: "customer,preference"
